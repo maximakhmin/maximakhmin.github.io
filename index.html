@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="CSS/nav.css">
+    <title>Мир Автогонок</title>
+    <link rel="icon"
+          type="image/png"
+          href="pictures/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="JS/burger-menu.js"></script>
+</head>
+
+<body onload="loadNews()">
+
+
+<main>
+    <nav>
+        <div class="burger-menu-span"><span></span></div>
+        <div class="nav-top">
+            <p>МИР АВТОГОНОК</p>
+        </div>
+        <div class="nav-bottom">
+            <div class="nav-buttons" id="categories">Категории
+                <div class="nav-cat">
+                    <a class="nav-cat-buttons" href="series.html">Серии</a><br>
+                    <a class="nav-cat-buttons" href="pilots.html">Пилоты</a><br>
+                    <a class="nav-cat-buttons" href="tracks.html">Трассы</a>
+                </div>
+
+            </div>
+            <a class="nav-buttons" style="
+                border: 2px solid #ccccff;
+                border-radius: 10px;">О сайте</a>
+            <a class="nav-buttons" href="likes.html">Избранное</a>
+            <a class="nav-buttons" href="form.html">Авторизация</a>
+        </div>
+
+        <div class="burger-menu">
+            <a class="menu-buttons" href="series.html">Серии</a><br><hr>
+            <a class="menu-buttons" href="pilots.html">Пилоты</a><br><hr>
+            <a class="menu-buttons" href="tracks.html">Трассы</a><br><hr>
+            <a class="menu-buttons" href="index.html">О сайте</a><br><hr>
+            <a class="menu-buttons" href="likes.html">Избранное</a><br><hr>
+            <a class="menu-buttons" href="form.html">Авторизация</a><br>
+        </div>
+        <br>
+    </nav>
+    <br>
+    <div class="main">
+        <div id="description">
+            <p style="font-size: 22px; color:#dbdbdb; text-align: center;padding:22px;margin:0">О сайте</p>
+            <p align="justify" style="color:#dbdbdb; width: 90%; margin-left: auto; margin-right: auto;">
+                На этом сайте представлены самые популярные гоночные серии, пилоты и трассы. Вы можете
+                ознакомится с ними в разделе "категории". Вы так же можете добавить то, что вам понравится в избранное.
+            </p>
+            <br>
+
+            <p style="font-size: 22px; color:#dbdbdb; text-align: center">Контакты</p>
+
+            <p align="justify" style="color:#dbdbdb; width: 90%; margin-left: auto; margin-right: auto;">
+                Сайт сделал студент группы ИКБО-03-21 Ахмин Максим Сергеевич
+            </p>
+
+            <img src="pictures/white-telefon.png" width="20px" style="margin-left:5%">
+            <a href="tel:89267949981" style="font-size: 18px; color:#dbdbdb;">+7(926)794-99-81</a><br>
+
+            <img src="pictures/white-mail.png" width="20px" style="margin-left:5%">
+            <a href="mailto:maximakhmin@gmail.com" style="font-size: 18px; color:#dbdbdb;">maximakhmin@gmail.com</a>
+            <br><br>
+
+        </div>
+
+        <br>
+
+        <div class="news">
+            <p style="font-size: 22px;padding:22px;margin:0">Последние новости</p>
+            <div id="sub-news"></div>
+        </div>
+
+
+    </div>
+
+
+
+    <br>
+    <footer>
+        <div class="info">
+            <p style="font-size: 22px">Содержимое</p>
+            <p>Категории</p>
+            <ul>
+            <li><a href="series.html">Серии</a></li>
+            <li><a href="pilots.html">Пилоты</a></li>
+            <li><a href="tracks.html">Трассы</a></li>
+            </ul>
+            <a href="index.html">О сайте</a><br>
+            <a href="likes.html">Избранное</a><br><br>
+        </div>
+        <div class="about-us">
+            <p style="font-size: 22px">О сайте</p>
+            <p>На этом сайте представлены наиболее популярные автогоночные серии, самые выдающиеся пилоты и их достижения
+            , а так же наиболее популрные гоночные трассы с их описанием.</p>
+        </div>
+        <div class="contact">
+            <p style="font-size: 22px">Контакты</p>
+
+            <img src="pictures/telefon.png" width="20px">
+            <a href="tel:89267949981">+7(926)794-99-81</a><br>
+
+            <img src="pictures/mail.png" width="20px">
+            <a href="mailto:maximakhmin@gmail.com">maximakhmin@gmail.com</a>
+        </div>
+    </footer>
+
+
+
+    <script src="JS/likes.js"></script>
+</main>
+
+</body>
+</html>

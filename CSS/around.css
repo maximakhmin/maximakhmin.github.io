@@ -1,0 +1,212 @@
+#article, #around {
+    background-color: #2b2836;
+    position: relative;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
+    row-gap: 20px;
+    column-gap: 20px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.around-elem {
+
+    position: relative;
+    //max-height: 100%;
+    //display: block;
+    border-radius: 5px;
+    margin: 5%;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0;
+}
+.around-elem:before, .around-elem:after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 5px;
+    background: red;
+    opacity: 0;
+    transition: 1s;
+    background: linear-gradient(45deg, #3333ff, #6666ff);
+}
+.around-elem:before {
+    animation: around 6s infinite normal linear 0s;
+    top: 0;
+    left: 0;
+}
+.around-elem:after {
+    animation: around 6s infinite normal linear -3s;
+    top: calc(100% - 5px);
+    left: 0;
+}
+.around-overflow {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    z-index: -1;
+}
+#around-overflow1 {
+    background: linear-gradient(180deg, #9999ff, #6666ff);
+}
+#around-overflow4 {
+    background: linear-gradient(180deg, #cd9fa2, #ba7d81);
+}
+#around-overflow3 {
+    background: linear-gradient(180deg, #F4A460, #f28b30);
+}
+#around-overflow2 {
+    background: linear-gradient(180deg, #e34234, #fc8e86);
+}
+.around-text {
+    color: #2b2836;
+    position: relative;
+}
+#article:hover .around-elem:not(:hover), #around:hover .around-elem:not(:hover) {
+    filter: brightness(60%);
+}
+.around-elem:hover:after, .around-elem:hover:before{
+    opacity: 1;
+}
+.around-elem:hover .around-legend {
+    opacity: 1;
+}
+.around-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width:100%;
+}
+
+.around-legend {
+    width: 63%;
+    position: relative;
+    font-size: 350%;;
+    bottom: 0;
+    margin: 0;
+    left: 0;
+    bottom: 5%;
+    text-align: center;
+    font-style: italic;
+    color: #dbdbdb;
+    opacity: 0;
+    transition: 1s;
+}
+
+.like {
+    position: relative;
+    z-index: 999;
+    width: 30%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.like > * {
+    height: 100%;
+}
+.img {
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    //overflow:hidden;
+    position: relative;
+}
+.image {
+    width: 100%;
+    transition: 1s;
+    z-index: 9;
+    position: relative;
+}
+.img:before {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width: 70%;
+    height: 30%;
+    content: "Подробнее";
+    opacity: 0;
+    transition: 1s;
+    z-index: 99;
+    color: white;
+    font-size: 20px;
+    background: #2b2836;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.around-elem:hover .img:before {
+    opacity: 1;
+}
+
+
+
+
+
+
+@keyframes around {
+    from {
+        width: 100%;
+        height: 5px;
+        top: 0;
+        left: 0;
+    }
+    25% {
+        width: 5px;
+        height: 100%;
+        top: 0;
+        left: calc(100% - 5px);
+    }
+    50% {
+        width: 100%;
+        height: 5px;
+        top: calc(100% - 5px);
+        left: 0;
+    }
+    75% {
+        width: 5px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    to {
+        width: 100%;
+        height: 5px;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #article, #around {
+        grid-template-columns: 1fr;
+    }
+    .around-elem:before, .around-elem:after {
+        opacity: 0;
+    }
+    .around-elem:hover:after, .around-elem:hover:before{
+        opacity: 0;
+    }
+    .around-legend {
+        opacity: 1;
+    }
+    .img:before {
+        opacity: 0.7;
+    }
+    #article:hover .around-elem:not(:hover), #around:hover .around-elem:not(:hover) {
+        filter: brightness(100%);
+    }
+    .around-elem:hover .img:before {
+        opacity: 0.7;
+    }
+
+}

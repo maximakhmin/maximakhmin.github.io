@@ -1,0 +1,70 @@
+.form {
+    width: 90%;
+    background: #2b2836;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    //padding: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+    row-gap: 10px;
+}
+
+#reg {
+    grid-column: 1 / 3;
+}
+
+#tel, #mail {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#submit, #reg {
+    transition: 0.5s;
+}
+
+#login, #password, #submit, #reset, #reg, #tel, #mail {
+    background: #dbdbdb;
+    border: 0px solid;
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+}
+#login, #password, #submit, #reset, #reg {
+    height: 30px;
+}
+#tel, #mail {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+::placeholder {
+    font-style: italic;
+    text-align: center;
+}
+
+
+
+@media (max-width:768px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    #reg {
+        grid-column: 1 / 2;
+    }
+}
+
+
+
+
+
