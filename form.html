@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="CSS/form.css">
+    <title>Мир Автогонок</title>
+    <link rel="icon"
+          type="image/png"
+          href="pictures/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<div class="form">
+    <p style="font-size:22px; text-align:center;color:#dbdbdb;padding:22px;margin-bottom:0">Авторизация</p>
+    <form method="post" id="form">
+        <input type="text" id="login" name="login" required placeholder="Логин">
+        <input type="password" id="password" name="password" required placeholder="Пароль">
+        <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="\+{0,1}\d{11}">
+        <input type="email" id="mail" name="mail" placeholder="Почта">
+
+        <button type="submit" name="submit" id="submit" onSubmit="window.location='index.html'">Войти</button>
+        <button type="reset" name="reset" id="reset">Очистить</button>
+
+        <button type="button" id="reg" onclick="newAccount()">Создать новую учетную запись</button>
+
+    </form>
+    <br>
+
+    <script src="JS/form.js"></script>
+</div>
+
+
+</body>
+</html>
